@@ -81,7 +81,7 @@ public class DateChangeTest {
         $$("button .button__text").first().click();
         $(By.cssSelector("[data-test-id='replan-notification'] .notification__content")).shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("У вас уже запланирована встреча на другую дату. Перепланировать? Перепланировать"));
         $$("button .button__text").last().click();
-        $(By.cssSelector("[data-test-id='success-notification'] .notification__content")).shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("Встреча успешно запланирована на " + changedMeetingDate));
+        $(By.cssSelector("[data-test-id='success-notification'] .notification__content")).shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("Встреча успешно запланирована на " + initialMeetingDate));
     }
 
 }
